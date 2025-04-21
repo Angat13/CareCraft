@@ -1,0 +1,136 @@
+/* General container styles */
+.med-item {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.med-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Image container styles */
+.med-item-img-container {
+  position: relative;
+  width: 100%;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.med-item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.med-item-img-container:hover .med-item-image {
+  transform: scale(1.05);
+}
+
+/* Counter button container */
+.med-item-counter {
+  position: absolute;  /* Keep it inside the container */
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 8px 15px;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: auto;
+  height: 45px;
+  z-index: 10;
+  backdrop-filter: blur(5px);
+}
+
+
+/* Minus and Plus button styles */
+.med-item-counter img {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  opacity: 0.8;
+}
+
+.med-item-counter img:hover {
+  transform: scale(1.15);
+  opacity: 1;
+}
+
+/* Center quantity span */
+.med-item-counter span {
+  font-size: 17px;
+  font-weight: bold;
+  color: #444;
+  margin: 0 12px;
+  position: relative;
+  top: -2px;
+}
+
+/* Info container styles */
+.med-item-info {
+  margin-top: 15px;
+}
+
+.med-item-name-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.med-item-name-price p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
+}
+
+.med-item-price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #2ecc71; /* Changed to a fresh green color */
+  background: linear-gradient(135deg, #2ecc71, #27ae60);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.med-item-desc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 0 5px;
+}
+
+/* Optional: Add a subtle gradient overlay on hover */
+.med-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(46, 204, 113, 0.1), rgba(39, 174, 96, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.med-item:hover::before {
+  opacity: 1;
+}

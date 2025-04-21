@@ -1,0 +1,82 @@
+.admin-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw; /* Ensure it takes the full width */
+    background: linear-gradient(135deg, #007bff, #00d4ff);
+    animation: fadeIn 0.8s ease-in-out;
+    overflow: hidden; /* Prevents any unwanted scroll */
+}
+
+.admin-login-form {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.admin-login-form:hover {
+    transform: scale(1.02);
+}
+
+.admin-login-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.admin-login-form input {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.admin-login-form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+.admin-login-form button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+}
+
+.admin-login-form button:hover {
+    background: linear-gradient(135deg, #0056b3, #004095);
+    transform: translateY(-2px);
+}
+
+.admin-login-form button:active {
+    transform: scale(0.98);
+}
+
+/* Adding a smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+.navbar1 {
+  width: 100vw;  /* Full viewport width */
+  max-width: 100%;  /* Ensure it doesn't shrink */
+  height: auto;  /* Adjust height as needed */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #000; /* Black background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.navbar-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff; /* White text for contrast */
+  margin: 0;
+
+}
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  pointer-events: none;
+}
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: relative;  /* Ensure links are above any dropdown */
+  z-index: 1001;  /* Ensure navbar links have a higher z-index than dropdown */
+}
+
+.navbar-links li {
+  margin-left: 1.5rem;
+  position: relative;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #fff; /* White text */
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  transition: color 0.3s ease, transform 0.3s ease;
+  z-index: 1001;  /* Ensure links are clickable */
+}
+
+/* Underline Animation */
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background-color: #4a90e2; /* Blue underline */
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+.navbar-links a:hover {
+  color: #4a90e2; /* Hover color */
+  transform: scale(1.1);
+}
+
+/* Sign-in Button */
+.sign-in {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  margin-left: 5px;
+  overflow: hidden;
+}
+
+/* Button Hover Effect */
+.sign-in:hover {
+  background-color: #3a7bc8;
+  transform: scale(1.05);
+}
+
+/* Profile Section */
+.navbar-profile {
+  position: relative;
+}
+
+.navbar-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-profile img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(74, 144, 226, 0.5);
+}
+
+/* Profile Dropdown */
+.navbar-profile-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #222; /* Darker dropdown */
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0;
+  min-width: 150px;
+  list-style-type: none;
+  z-index: 1000;  /* Ensure dropdown has lower z-index than the navbar */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+}
+
+.navbar-profile-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.navbar-profile-dropdown li {
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  color: white;
+}
+
+.navbar-profile-dropdown li:hover {
+  background-color: #333;
+  transform: translateX(5px);
+}
+
+/* Dropdown Divider */
+.navbar-profile-dropdown hr {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid #444;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar1 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links {
+    margin-top: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-links li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .navbar-profile {
+    margin-top: 1rem;
+  }
+
+  .navbar-profile-dropdown {
+    left: 0;
+    right: auto;
+  }
+}

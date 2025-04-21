@@ -1,0 +1,16 @@
+.med-display {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px; 
+  justify-content: center; 
+  padding: 20px; 
+  background-color: #f8f9fa; 
+}
+
+.med-display p {
+  font-size: 18px;
+  color: #555; /* Neutral color */
+  text-align: center; /* Center-align the text */
+  width: 100%; /* Occupy the full width */
+  margin-top: 20px; /* Add spacing from the top */
+}

@@ -1,0 +1,38 @@
+/* Container for the entire CareDisplay component */
+.care-display {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  background-color: #f9f9f9; /* Light background for better readability */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative; /* Add position relative to adjust top */
+  top: -275px; /* Move the component up by 50px */
+}
+
+/* Explore menu container */
+#care-display .care-explore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+}
+
+/* Styling for the Care items container */
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .care-item-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .care-item-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}

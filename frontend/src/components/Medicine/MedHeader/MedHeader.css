@@ -1,0 +1,48 @@
+.header5 {
+    height: 80vh; /* Full height of the viewport */
+    width: 100vw; /* Full width of the viewport */
+    margin: 2; /* Remove margin */
+    background: url('MedicineHeader.jpg') no-repeat center center; /* Center the image */
+    background-size: cover; /* Cover the entire screen */
+    position: relative; /* Keep positioning for potential child elements */
+}
+
+.header-contents5{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap:1.5vw;
+    max-width: 50%;
+    bottom: 10%;
+    left: 6vw;
+    animation:FadeIn 3s;
+}
+.header-contents5 h2{
+    color: white;
+    font-weight: 500;
+    font-size: max(4.5vw,22px);
+}
+.header-contents5 p{
+    color: white;
+    font-size: 1vw;
+}
+
+@media (max-width:1050px) {
+
+    .header-contents{
+        max-width: 45%;
+    }    
+}
+@media (max-width:750px) {
+    .header-contents{
+        max-width: 65%;
+    }    
+    .header-contents p{
+        display: none;
+    }
+    .header-contents button{
+        padding: 2vw 4vw;
+    }
+}
+

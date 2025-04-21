@@ -1,0 +1,55 @@
+.med-info {
+    text-align: center;
+    margin: 50px 0;
+    position: relative;
+  }
+  
+  .med-info-line {
+    border: none;
+    border-top: 4px solid #007bff;  /* A more vibrant blue */
+    width: 70%;
+    margin: 0 auto 30px auto;  /* Spacing for the lines */
+    opacity: 0.6;  /* Slight opacity for a softer look */
+  }
+  
+  .med-info-text {
+    font-size: 28px;  /* Increased font size for better visibility */
+    color: #333;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    text-transform: uppercase;
+    margin: 0 15px;
+    position: relative;
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for text depth */
+  }
+  
+  .med-info-text::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 5px;
+    background: linear-gradient(90deg, #00aaff, #007bff);  /* Gradient effect on the line */
+    border-radius: 10px;
+  }
+  
+  .med-info-text span {
+    font-weight: 800;
+    color: #00aaff;  /* Accent color for the highlighted part */
+  }
+  
+  @media (max-width: 768px) {
+    .med-info-text {
+      font-size: 24px;
+      margin: 0 10px;
+    }
+  
+    .med-info-line {
+      width: 80%;  /* Adjust line width on smaller screens */
+    }
+  }
+  

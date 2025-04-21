@@ -1,0 +1,8 @@
+.Careheader {
+    height: 70vw;
+    margin: -275px auto 30px auto; /* Negative margin to move it up */
+    background: url('Home.jpeg') no-repeat;
+    background-size: contain;
+    background-position: center; /* Keep the image centered */
+    position: relative;
+}

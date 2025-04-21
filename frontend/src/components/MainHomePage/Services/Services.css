@@ -1,0 +1,108 @@
+/* Container for the entire service section */
+.services-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+/* Individual service box */
+.service {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevents overflow of video */
+}
+
+/* Video styling (full screen) */
+.service-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the video covers the screen */
+  z-index: -1; /* Makes sure video stays behind the content */
+  opacity: 0; /* Initially hide the video */
+  transition: opacity 1s ease-in-out; /* Smooth fade-in and fade-out transition */
+}
+
+/* When the video is visible */
+.service-video {
+  opacity: 1; /* Make video visible */
+}
+
+/* Overlay content on left side */
+.service-content {
+  position: absolute;
+  top: 30%;
+  left: 5%; /* Position content towards the left */
+  transform: translateY(-50%);
+  text-align: left;
+  color: white;
+  z-index: 1; /* Ensures content is on top of the video */
+  padding: 20px;
+  max-width: 40%;
+  border-radius: 10px;
+}
+
+/* Title of the service */
+.service-title {
+  font-size: 3rem; /* Increased font size for title */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Description of the service */
+.service-description {
+  font-size: 1.4rem; /* Increased font size for description */
+  margin-bottom: 20px;
+}
+
+/* Button for toggling service details */
+.service-button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #0056b3;
+}
+
+/* Service details section */
+.service-details {
+  display: none;
+  margin-top: 15px;
+  font-size: 1.1rem;
+  color: #ddd;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* When the details are visible */
+.service-details.visible {
+  display: block;
+  opacity: 1;
+}
+
+/* Make text responsive on smaller screens */
+@media screen and (max-width: 768px) {
+  .service-title {
+    font-size: 2rem;
+  }
+  .service-description {
+    font-size: 1rem;
+  }
+  .service-button {
+    font-size: 1rem;
+  }
+}
