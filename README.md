@@ -1,1 +1,2 @@
-# CareCraft
+CareCraft is a hospital-focused service platform designed to enhance the well-being of elderly patients admitted to the hospital. Hospital staff can log in and book personalized services like caretakers, homemade food, medicine delivery, guitar therapy, and physical therapy on behalf of admitted patients. The platform ensures patients receive comfort and care beyond medical treatment, with service availability managed by an admin on the backend.
+
