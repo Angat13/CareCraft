@@ -8,7 +8,7 @@ const center = { lat: 19.1365, lng: 72.8278 }; // User's fixed location
 
 const TrackOrder = () => {
   const { isLoaded } = useJsApiLoader({
-    googleMapsApiKey: "AIzaSyCZW8WuF-niHFYqi5YD7mQUv-sPOVAC-Ak", // Replace with your Google Maps API key
+    googleMapsApiKey: "YOUR API KEY", // Replace with your Google Maps API key
   });
 
   const [rider, setRider] = useState(null); // Stores the assigned rider ID
